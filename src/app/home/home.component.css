@@ -1,0 +1,18 @@
+.home-header {
+  text-align: center;
+  padding-top: 150px;
+}
+.home-header .home-header__el {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.home-header .home-header__el .c-rose {
+  color: #cc00cc;
+}
+.home-header .home-header__el .c-yellow {
+  color: yellow;
+}
+.home-header .home-header__el .c-blue {
+  color: blue;
+}

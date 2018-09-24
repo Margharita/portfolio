@@ -1,0 +1,9 @@
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact-wrapper .contact-form {
+  background-color: rgba(48, 42, 42, 0.5);
+  padding: 20px;
+}

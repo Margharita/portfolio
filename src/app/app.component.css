@@ -1,0 +1,15 @@
+.main-menu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main-menu-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.main-menu-nav ul .main-menu__item {
+  padding-left: 100px;
+}
+.main-menu-nav ul .main-menu__item a {
+  cursor: pointer;
+}
