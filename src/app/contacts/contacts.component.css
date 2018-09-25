@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.contact-wrapper .contacts__item-line {
+  height: 1px;
+  background-color: #000000;
+  width: 30px;
+}
 .contact-wrapper .contact-form {
   background-color: rgba(48, 42, 42, 0.5);
   padding: 20px;
