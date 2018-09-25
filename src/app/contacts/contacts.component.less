@@ -1,14 +1,62 @@
-.contact-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    .contacts__item-line {
-        height: 1px;
-        background-color: #000000;
-        width: 30px;
+.contact-wrapper {
+      flex-direction: row;
+        justify-content: space-around;
+    .contacts {    
+        
+        .contacts__item {
+            margin-left: 50px;
+            font-size: 16px;
+        }    
+        .contacts__item-line {
+            margin: 15px 100px; 
+            height: 1px;
+            background-color: #000000;
+            width: 30px;
+        }
+        h3 {
+            text-align: center;
+            font-size: 20px;
+        }
+        .contacts__item-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            a {
+                display: block;
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                margin-right: 5px;
+            }
+            .contacts__item-link-vk {
+                background-image: url('https://api.icons8.com/download/d95d5282bf34ebdda41c6dcc9fc0b70b229a7d48/Color/PNG/512/Social_Networks/vk_com-512.png');
+            }
+            .contacts__item-link-telegram {
+                background-image: url("https://pngicon.ru/file/uploads/telegram.png");
+            }
+            .contacts__item-link-linkedIn {
+                background-image: url("https://ru.seaicons.com/wp-content/uploads/2016/03/Linkedin-icon-7.png");
+            }
+        }
     }
     .contact-form {
+        width: 500px;
         background-color: rgba(48, 42, 42, 0.5);
-        padding: 20px;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        .contact-form-item {
+            margin: 15px;
+            input {
+                width: 400px;
+            }
+            .contact-form-message {
+                width: 400px;
+            }
+            .contact-form-btn {
+                align-self: center;
+                padding: 0 15px;
+            }
+        }
     }
 }

@@ -1,23 +1,35 @@
-<div class="contact-wrapper">
-    <div class="col-6 contacts">
-      <div class="contacts__item-wrapper">
-        <p class="contact-item-address">г. Минск, ул. Козлова, д. 31, кв.19</p>
-      </div>
-      <div class="contacts__item-wrapper">
-        <a class="contacts__item-phone" href="tel:+375295769386">+375295769386</a>
-      </div>
-      <div class="contacts__item-line"></div>
-      <div class="contacts__item-wrapper">
-        <h2>social media links</h2>
-        <div class="contacts__item-link-facebook"></div>
-        <div class="contacts__item-link-telegram"></div>
-        <div class="contacts__item-link-linkedIn"></div>
-      </div>
+<div class="contact-wrapper row">
+  <div class="contacts col-md-3">
+    <div class="contacts__item">
+      <a class="contacts__item-phone" href="tel:+375295769386">+375295769386</a>
     </div>
-    <div class="col-6 contact-form-wrapper">
-      <div class="contact-form">
-        <input type="text" class="contact-form__name">
-        <input type="text" class="contact-form__email">
-        <input type="text" class="contact-form__message">
+    <div class="contacts__item">
+        <a class="contact__item-email">5769386@gmail.com</a>
       </div>
+    <div class="contacts__item">
+      <p class="contact__item-address">г. Минск, ул. Козлова, д. 31, кв.19</p>
     </div>
+    <div class="contacts__item-line"></div>
+    <h3>Social media links:</h3>
+    <div class="contacts__item-wrapper">
+      <a class="contacts__item-link-vk" href="https://vk.com/meritneit" target="_blank"></a>
+      <a class="contacts__item-link-telegram" href="t.me/lifehackerru" target="_blank"></a>
+      <a class="contacts__item-link-linkedIn" href="https://www.linkedin.com/in/margarita-glinskaya-377448162/" target="_blank"></a>
+    </div>
+  </div>
+  <div class="contact-form-wrapper col-md-6">
+    <form class="form-inline contact-form d-flex" role="form">
+      <h3 class="pl-3">Contact with me:</h3>
+      <div class="contact-form-item">
+        <input type="text" class="form-control contact-form-name" id="name1" placeholder="Enter name">
+      </div>
+      <div class="contact-form-item">
+        <input type="text" class="form-control contact-form-email" id="email2" placeholder="Enter email">
+      </div>
+      <div class="contact-form-item mb-4">
+        <textarea class="form-control contact-form-message" aria-label="With textarea" placeholder="Enter message" id="msg3"></textarea>
+      </div>
+      <button type="button" class="btn btn-warning align-self-center contact-form-btn">Submit</button>
+    </form>
+  </div>
+</div>

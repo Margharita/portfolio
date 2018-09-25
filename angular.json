@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap-less/bootstrap/bootstrap.less",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/less/styles.less"
             ],
             "scripts": []

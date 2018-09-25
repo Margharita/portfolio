@@ -6,27 +6,30 @@
         .about-photo {
             width: 250px;
             height: 250px;
-            //border-radius: 50%;
+            border: 5px outset mistyrose;
+            border-radius: 50%;
             background-image: url('../../assets/images/myPhoto.JPG');
             background-size: cover;
         }
     }
     .who-block {
-        padding-left: 150px;
+        padding-left: 50px;
         padding-top: 70px;
         width: 50%;
         .about-who {
+            border-left: 8px double;
             .about-who__name {
                 font-size: 30px;
                 text-transform: uppercase;
                 text-align: center;
+                color: tomato;
             }
             .about-who__profession {
                 //padding-left: 90px;
                 text-align: center;
                 &:before {
                     content: "";
-                    margin-left: 160px;
+                    margin-left: 330px;
                     margin-bottom: 15px;
                     display: block;
                     background-color: #000000;
@@ -36,7 +39,12 @@
             }
             .about-description {
                 padding: 10px;
-                background-color: #ffffff;
+                box-shadow: 0 0 60px 0.2px darkslategrey;
+                margin-left: 20px;
+                background-color: rgba(1, 1, 1, 0.5);
+                margin-top: 50px;
+                color: mintcream;
+                text-align: center;
             }
         }
     }

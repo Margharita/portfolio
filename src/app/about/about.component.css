@@ -8,25 +8,31 @@
 .row .photo-block .about-photo {
   width: 250px;
   height: 250px;
+  border: 5px outset mistyrose;
+  border-radius: 50%;
   background-image: url('../../assets/images/myPhoto.JPG');
   background-size: cover;
 }
 .row .who-block {
-  padding-left: 150px;
+  padding-left: 50px;
   padding-top: 70px;
   width: 50%;
+}
+.row .who-block .about-who {
+  border-left: 8px double;
 }
 .row .who-block .about-who .about-who__name {
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
+  color: tomato;
 }
 .row .who-block .about-who .about-who__profession {
   text-align: center;
 }
 .row .who-block .about-who .about-who__profession:before {
   content: "";
-  margin-left: 160px;
+  margin-left: 330px;
   margin-bottom: 15px;
   display: block;
   background-color: #000000;
@@ -35,5 +41,10 @@
 }
 .row .who-block .about-who .about-description {
   padding: 10px;
-  background-color: #ffffff;
+  box-shadow: 0 0 60px 0.2px darkslategrey;
+  margin-left: 20px;
+  background-color: rgba(1, 1, 1, 0.5);
+  margin-top: 50px;
+  color: mintcream;
+  text-align: center;
 }
