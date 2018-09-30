@@ -7,9 +7,13 @@
   list-style: none;
 }
 * a {
-  color: unset;
+  text-decoration: none;
+  color: initial;
 }
-.head-app {
-  background: url('../assets/images/O5GLLH0.jpg') center center no-repeat;
-  background-size: cover;
+* a:hover {
+  text-decoration: none;
+  color: initial;
+}
+body {
+  background: url('../assets/images/O5GLLH0.jpg') top center no-repeat;
 }

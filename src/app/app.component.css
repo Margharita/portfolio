@@ -1,6 +1,14 @@
 .main-menu {
   padding-bottom: 50px;
 }
+.main-menu .dropdown:hover {
+  display: block;
+  margin-top: 0;
+}
+.main-menu .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
 .main-menu li {
   font-size: 20px;
   padding-right: 80px;

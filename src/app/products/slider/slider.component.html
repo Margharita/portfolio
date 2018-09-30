@@ -1,0 +1,9 @@
+<div class="slider d-flex">
+  <button class="fa fa-angle-left slider-button btn-dark" (click)="onPrevButton()" [disabled]="currentIndex === 0"
+   [ngClass]="{'inactive': currentIndex === 0}"></button>
+  <div class="slider-window">
+    <img class="show" src="{{ images[currentIndex].thumbnail }}" *ngIf="images.length > 0">
+    </div>
+  <button class="fa fa-angle-right slider-button btn-dark" (click)="onNextButton()"
+   [ngClass]="{'inactive': currentIndex === images.length - 1}" [disabled]="currentIndex === images.length - 1"></button>
+</div>

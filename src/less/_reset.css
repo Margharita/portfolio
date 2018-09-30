@@ -4,7 +4,12 @@
 }
 * ul {
   list-style: none;
-} 
+}
 * a {
-  color: unset;
+  text-decoration: none;
+  color: initial;
+}
+* a:hover {
+  text-decoration: none;
+  color: initial;
 }

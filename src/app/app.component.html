@@ -4,20 +4,26 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="/products" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/products/slider">slider</a>
+          <a class="dropdown-item" routerLink="/products/calc">calculator</a>
+          <a class="dropdown-item" routerLink="/products/todo">to-do list</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/products">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contacts">Contacts</a>
+        <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts</a>
       </li>
     </ul>
   </div>
 </nav>
-   
     <router-outlet> </router-outlet>
+    <!-- <router-outlet name="slider"></router-outlet> -->
+   

@@ -1,0 +1,20 @@
+.slider {
+  box-shadow: 0 0 10px 2px #918181;
+  border: 5px ridge #faf5f5;
+  margin: 20px auto;
+  width: 400px;
+}
+.slider .slider-window {
+  width: 100%;
+}
+.slider .slider-window img {
+  width: 100%;
+}
+.slider button {
+  width: 20px;
+}
+.slider .inactive {
+  background-color: #cccccc;
+  border: 1px solid #918181;
+  color: #faf5f5;
+}

@@ -1,6 +1,4 @@
-.row {
-    display: flex;
-    justify-content: center;
+.about-row {
     .photo-block {
         padding-top: 50px;
         .about-photo {
@@ -14,10 +12,7 @@
     }
     .who-block {
         padding-left: 50px;
-        padding-top: 70px;
-        width: 50%;
         .about-who {
-            border-left: 8px double;
             .about-who__name {
                 font-size: 30px;
                 text-transform: uppercase;
@@ -25,12 +20,10 @@
                 color: tomato;
             }
             .about-who__profession {
-                //padding-left: 90px;
                 text-align: center;
                 &:before {
                     content: "";
-                    margin-left: 330px;
-                    margin-bottom: 15px;
+                    margin: 15px auto;
                     display: block;
                     background-color: #000000;
                     height: 1px;
@@ -47,5 +40,11 @@
                 text-align: center;
             }
         }
+    }
+}
+
+@media (max-width: 992px) { 
+    .who-block {
+        border-left: none;
     }
 }
