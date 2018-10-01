@@ -1,19 +1,16 @@
-<div class="item-task">
-  <li class="element">
-      <div class="task-title" (click)="isModifying = true;">
-          <span ngFor="let item of tasks" *ngIf="!isModifying" [ngClass]="{ 'is-done': item.done}">{{ item.title }}</span>
-      </div>
-      <div class="text-modify" *ngIf="isModifying"> <input class=" optional-input" *ngIf="isModifying" [(ngModel)]="item.title">
-          <button class="optional-button ok" *ngIf="isModifying" (click)="onChange(item)">OK</button>
-      </div>
-      <div class="error-class" *ngIf="isError">{{ errorMessage }}</div>
-      <div class="text-option">
-          <input type="checkbox" class="check-box" [checked]="item.done" (click)="onToggle(item)">
-          <button class="optional-button delete " (click)="onDelete(item)">X</button>
-      </div>
-      <div class="waiting-image">
-          <img src="http://www.playcast.ru/uploads/2016/02/23/17479109.gif " *ngIf="isWaiting ">
-      </div>
-  </li>
+<li class="todo-item">
+    <div class="todo-item__title" (click)="isModifying = true;">
+        <span ngFor="let item of tasks" *ngIf="!isModifying" [ngClass]="{ 'is-done': item.done}">{{ item.title }}</span>
+    </div>
+    <div class="todo-item__text-modify" *ngIf="isModifying"> <input class=" optional-input" *ngIf="isModifying" [(ngModel)]="item.title">
+        <button class="optional-button ok" *ngIf="isModifying" (click)="onChange(item)">OK</button>
+    </div>
+    
+    <div class="todo-item__text-option">
+        <input type="checkbox" class="check-box"  [checked]="item.done" (click)="onToggle(item)">
+        <button class="optional-button delete " (click)="onDelete(item)">X</button>
+    </div>
+    <img class="waiting-image" src="http://www.playcast.ru/uploads/2016/02/23/17479109.gif " *ngIf="isWaiting ">
+    <div class="todo-item__error-class" *ngIf="isError">{{ errorMessage }}</div>
+</li>
 
-</div>

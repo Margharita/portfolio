@@ -10,7 +10,7 @@ import { Task } from '../../../shared/task';
   styleUrls: ['./todo.component.less']
 })
 export class TodoComponent {
-  name: String = 'MY EVERYDAY TASKS:';
+  name: String = 'My everyday tasks:';
   @ViewChild('tasksList') tasksList: ListComponent;
   @ViewChild('tasksItem') tasksItem: ItemComponent;
 
