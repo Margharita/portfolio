@@ -1,5 +1,6 @@
-<ul class="products">
+<ul class="products" *ngIf="!isChildActive()">
 <li class="products__el"><a routerLink="slider" class="products__el-link">slider</a></li>
 <li class="products__el"><a routerLink="calc" class="products__el-link">calculator</a></li>
 <li class="products__el"><a routerLink="todo" class="products__el-link">to-do list</a></li>
 </ul>
+<router-outlet></router-outlet>

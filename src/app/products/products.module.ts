@@ -5,23 +5,29 @@ import { ProductsComponent } from './products.component';
 import { SliderComponent } from './slider/slider.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { TodoComponent } from './todo/todo.component';
+import { SliderService } from '../../services/sliderService';
+import { TodoModule } from './todo/todo.module';
+
 
 const prRoutes: Routes = [
-     {path: 'products', component: ProductsComponent},
-    //   children: [
-    //      {path: 'slider', component: SliderComponent },
-    //     {path: 'calc', component: CalculatorComponent},
-    //     {path: 'todo', component: TodoComponent}
-    //  ]}
-     {path: 'products/slider', component: SliderComponent},
-     {path: 'products/calc', component: CalculatorComponent},
-     {path: 'products/todo', component: TodoComponent}
+     {path: 'products', component: ProductsComponent, children: [
+         {path: 'slider', component: SliderComponent },
+        {path: 'calc', component: CalculatorComponent},
+        {path: 'todo', component: TodoComponent}
+     ]}
+    
 ]
 
 @NgModule({
+    declarations: [
+        SliderComponent,
+        CalculatorComponent
+    ],
     imports: [
         CommonModule,
+        TodoModule,
         RouterModule.forChild(prRoutes)        
-    ]
+    ],
+    providers: [SliderService],
 })
 export class ProductsModule { }

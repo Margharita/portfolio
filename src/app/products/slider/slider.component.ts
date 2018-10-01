@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from '../../../assets/classes/sliderImage';
+import { Image } from '../../../shared/sliderImage';
 import { SliderService } from '../../../services/sliderService';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
@@ -11,13 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class SliderComponent implements OnInit {
   currentIndex = 0;
   images: Image[] = [];
+  currentUrl: string;
 
   constructor(private route: ActivatedRoute, private sliderService: SliderService) {
+    this.currentUrl = ''
   }
 
-  ngOnInit() {
-    //let id = +this.route.snapshot.params['id'];
-
+  ngOnInit() {    
     const getUrls = this.sliderService.getImageOfServer();
     getUrls.subscribe((data) => {
     this.images = data;

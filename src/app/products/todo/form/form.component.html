@@ -1,0 +1,8 @@
+<div class="task-form">
+  <form (ngSubmit)="onSubmit()" #newTask="ngForm">
+      <input class="field-to-write" placeholder="Что нужно сделать?" name="title" [(ngModel)]="title" required>
+      <div class="error-class" *ngIf="isError">{{ errorMessage }}</div>
+      <button type="submit" [disabled]="newTask.form.invalid" *ngIf="!isWaiting">Добавить</button>
+      <img src="http://www.playcast.ru/uploads/2016/02/23/17479109.gif" *ngIf="isWaiting">
+  </form>
+</div>

@@ -1,3 +1,7 @@
-<p>
-  todo works!
-</p>
+<div class="task-list">
+  <h1> {{ name }} </h1>
+  <app-form (taskPush)="taskAdd($event)"></app-form>
+  <ul>
+      <app-list #tasksList #tasksItem></app-list>
+  </ul>
+</div>
