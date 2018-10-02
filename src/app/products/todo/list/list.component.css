@@ -1,3 +1,6 @@
 .todo-list {
   padding: 30px;
 }
+.todo-list:last-child {
+  padding-bottom: 0;
+}

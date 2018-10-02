@@ -14,7 +14,7 @@ import { TaskOperationResult } from '../../../../shared/task.operation.result';
 export class ItemComponent {
   @Input() item: Task = null;
   @Output() taskDel = new EventEmitter();
-  // tslint:disable-next-line:no-inferrable-types
+  
   isWaiting: boolean = false;
   isModifying: boolean = false;
   isError = false;
@@ -31,6 +31,7 @@ export class ItemComponent {
   }
 
   onToggle(item: Task) {
+    debugger;
     this.isWaiting = true;
     this.item.done = !this.item.done;
     const tog = this.taskService.putTaskOnServer(item.id, item.done);
