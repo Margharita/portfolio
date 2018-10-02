@@ -1,14 +1,19 @@
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+}
 .todo-form input {
-  width: 70%;
-  display: inline-block;
+  width: 80%;
+  flex-grow: 3;
 }
 .todo-form button {
-  display: inline-block;
   margin-left: 10px;
   padding: 5px 10px;
   border-radius: 5px;
+  flex-grow: 1;
+  max-width: 90px;
 }
 .todo-form .waiting-image {
-  display: inline-block;
-  width: 100px;
+  height: 38px;
+  width: 62px;
 }

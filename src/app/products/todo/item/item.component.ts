@@ -31,7 +31,6 @@ export class ItemComponent {
   }
 
   onToggle(item: Task) {
-    debugger;
     this.isWaiting = true;
     this.item.done = !this.item.done;
     const tog = this.taskService.putTaskOnServer(item.id, item.done);

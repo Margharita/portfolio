@@ -1,20 +1,24 @@
 <div class="todo-item-wrapper">
-    <li class="todo-item d-flex justify-content-between">
-        <div class="todo-item__title" (click)="isModifying = true;">
-            <span ngFor="let item of tasks" *ngIf="!isModifying" [ngClass]="{ 'title-done': item.done}">{{ item.title }}</span>
-        </div>
-        <div class="todo-item__text-modify" *ngIf="isModifying"> <input class=" optional-input" *ngIf="isModifying" [(ngModel)]="item.title">
-            <button class="optional-button ok" *ngIf="isModifying" (click)="onChange(item)">OK</button>
-        </div>
-        <div class="todo-item__text-option align-self-end">
+    <div class="todo-item-block">
+        <li class="todo-item d-flex justify-content-between">
+            <div class="todo-item__title" >
+                <div (click)="isModifying = true;" ngFor="let item of tasks" *ngIf="!isModifying" [ngClass]="{ 'title-done': item.done}">{{
+                    item.title }}</div>
+                <div class="todo-item__text-modify" *ngIf="isModifying"> <input class="form-control" *ngIf="isModifying" [(ngModel)]="item.title">
+                <button *ngIf="isModifying" (click)="onChange(item)">OK</button>
+                </div>           
+            </div>
             
-            <label  [ngClass]="{ 'fa fa-check': item.done}">
+            <div class="todo-item__text-option align-self-end"  *ngIf="!isWaiting">
+                <label [ngClass]="{ 'fa fa-check': item.done}">
                     <input type="checkbox" class="check-box" [checked]="item.done" (click)="onToggle(item)">
-            </label>
-            <button class="optional-button delete " (click)="onDelete(item)">X</button>
-        </div>
+                </label>
+                <button class="optional-button delete fa fa-remove" (click)="onDelete(item)"></button>
+            </div>
 
-    </li>
-    <img class="waiting-image" src="http://www.playcast.ru/uploads/2016/02/23/17479109.gif " *ngIf="isWaiting ">
-    <div class="todo-item__error-class" *ngIf="isError">{{ errorMessage }}</div>
+        </li>
+        <div class="error-mess" *ngIf="isError"><i class="fa fa-warning"></i>{{ errorMessage }}</div>
+        <div class="todo-item__waiting-image" *ngIf="isWaiting"></div>
+    </div>
+   
 </div>

@@ -4,10 +4,12 @@
 .main-menu .dropdown:hover {
   display: block;
   margin-top: 0;
+  transition: 1ms;
 }
 .main-menu .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
+  background-color: rgba(238, 227, 227, 0.9);
 }
 .main-menu li {
   font-size: 20px;

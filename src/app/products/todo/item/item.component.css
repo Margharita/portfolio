@@ -1,45 +1,78 @@
-.todo-item-wrapper .todo-item {
-  font-size: 20px;
-  display: inline-block;
-  border-bottom: 2px solid #d4abab;
-  padding: 5px;
-  width: 80%;
+.todo-item-block {
+  display: flex;
+  margin-top: 10px;
+  width: 90%;
 }
-.todo-item-wrapper .todo-item .todo-item__title {
-  display: inline-block;
+.todo-item-block .todo-item {
+  flex-grow: 10;
+  font-size: 23px;
+  display: inline-flex;
+}
+.todo-item-block .todo-item:hover {
+  background-color: rgba(238, 227, 227, 0.5);
+}
+.todo-item-block .todo-item .todo-item__title {
+  overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
-.todo-item-wrapper .todo-item .title-done {
+.todo-item-block .todo-item .todo-item__title .todo-item__text-modify {
+  display: inline-flex;
+}
+.todo-item-block .todo-item .todo-item__title .todo-item__text-modify input {
+  min-width: 40%;
+  max-width: 300px;
+  height: 25px;
+}
+.todo-item-block .todo-item .todo-item__title .todo-item__text-modify button {
+  text-transform: uppercase;
+  vertical-align: middle;
+  height: 30px;
+  border: none;
+  background: none;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.todo-item-block .todo-item .title-done {
   text-decoration: line-through;
 }
-.todo-item-wrapper .todo-item .todo-item__text-modify {
-  display: inline-block;
+.todo-item-block .todo-item .todo-item__text-option {
+  display: none;
 }
-.todo-item-wrapper .todo-item .todo-item__text-option {
-  display: inline-block;
+.todo-item-block .todo-item:hover .todo-item__text-option {
+  display: block;
   padding-left: 15px;
 }
-.todo-item-wrapper .todo-item .todo-item__text-option label {
+.todo-item-block .todo-item:hover .todo-item__text-option label {
   display: inline-block;
-  height: 25px;
-  width: 25px;
   border: 1px solid #000000;
   text-align: center;
   vertical-align: middle;
   margin-right: 10px;
-  border-radius: 50px;
+  background-color: azure;
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
 }
-.todo-item-wrapper .todo-item .todo-item__text-option input {
+.todo-item-block .todo-item:hover .todo-item__text-option input {
   display: none;
 }
-.todo-item-wrapper .todo-item .todo-item__text-option input:checked + label {
+.todo-item-block .todo-item:hover .todo-item__text-option input:checked + label {
   background-size: cover;
   transition: 0.5ms;
 }
-.todo-item-wrapper .todo-item .todo-item__text-option button {
+.todo-item-block .todo-item:hover .todo-item__text-option button {
+  margin-right: 10px;
   border: none;
+  color: #e60d0d;
+  background: none;
+  font-size: 25px;
 }
-.todo-item-wrapper .waiting-image {
-  display: inline-block;
-  width: 70px;
+.todo-item-block .todo-item__waiting-image {
+  flex-grow: 0;
+  display: inline-flex;
+  height: 30px;
+  width: 60px;
+  background: url('http://www.primebldg.com/wp-content/uploads/2017/09/ajax-loader.gif') bottom no-repeat;
+  background-size: contain;
 }
