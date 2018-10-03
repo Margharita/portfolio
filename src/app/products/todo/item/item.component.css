@@ -1,12 +1,15 @@
 .todo-item-block {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
   width: 90%;
 }
 .todo-item-block .todo-item {
-  flex-grow: 10;
-  font-size: 23px;
+  padding-top: 5px;
+  flex-grow: 9;
+  font-size: 18px;
   display: inline-flex;
+  min-height: 38px;
 }
 .todo-item-block .todo-item:hover {
   background-color: rgba(238, 227, 227, 0.5);
@@ -40,14 +43,13 @@
   display: none;
 }
 .todo-item-block .todo-item:hover .todo-item__text-option {
-  display: block;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
   padding-left: 15px;
 }
 .todo-item-block .todo-item:hover .todo-item__text-option label {
-  display: inline-block;
   border: 1px solid #000000;
-  text-align: center;
-  vertical-align: middle;
   margin-right: 10px;
   background-color: azure;
   border-radius: 5px;
@@ -63,14 +65,14 @@
 }
 .todo-item-block .todo-item:hover .todo-item__text-option button {
   margin-right: 10px;
+  padding-bottom: 8px;
   border: none;
   color: #e60d0d;
   background: none;
   font-size: 25px;
 }
 .todo-item-block .todo-item__waiting-image {
-  flex-grow: 0;
-  display: inline-flex;
+  flex-grow: 1;
   height: 30px;
   width: 60px;
   background: url('http://www.primebldg.com/wp-content/uploads/2017/09/ajax-loader.gif') bottom no-repeat;

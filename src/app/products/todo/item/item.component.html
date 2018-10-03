@@ -17,8 +17,8 @@
             </div>
 
         </li>
-        <div class="error-mess" *ngIf="isError"><i class="fa fa-warning"></i>{{ errorMessage }}</div>
         <div class="todo-item__waiting-image" *ngIf="isWaiting"></div>
+        <div class="error-mess" *ngIf="isError && !isModifying"><i class="fa fa-warning"></i>{{ errorMessage }}</div>
     </div>
    
 </div>
