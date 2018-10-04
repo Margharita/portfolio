@@ -1,6 +1,18 @@
 .main-menu {
   padding-bottom: 50px;
 }
+.main-menu .dropdown-block {
+  position: relative;
+}
+.main-menu .dropdown-block .dropdown-main-menu {
+  position: absolute;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  z-index: 1;
+  background: #ccc;
+}
 .main-menu .dropdown:hover {
   display: block;
   margin-top: 0;
@@ -8,8 +20,14 @@
 }
 .main-menu .dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0;
-  background-color: rgba(238, 227, 227, 0.9);
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.main-menu .dropdown:hover .dropdown-menu .dropdown-item {
+  padding-bottom: 5px;
+}
+.main-menu .dropdown:hover .dropdown-menu .dropdown-item:active {
+  background-color: #524444;
 }
 .main-menu li {
   font-size: 20px;

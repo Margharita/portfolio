@@ -1,3 +1,28 @@
-<p>
-  calculator works!
-</p>
+<div class="calculator">
+  <div class="operations-display">
+      {{displayValue}} 
+  </div>
+  <div class="calculator-operations">
+      <button class="operation" (click)="operation($event)">+</button>
+      <button class="operation" (click)="operation($event)">-</button>
+      <button class="operation" (click)="operation($event)">*</button>
+      <button class="operation" (click)="operation($event)">/</button>
+  </div>
+  <div class="calculator-numbers d-inline-block">
+      <button class="number" (click)="enterNum($event)">7</button>
+      <button class="number" (click)="enterNum($event)">8</button>
+      <button class="number" (click)="enterNum($event)">9</button>
+      <button class="number" (click)="enterNum($event)">4</button>
+      <button class="number" (click)="enterNum($event)">5</button>
+      <button class="number" (click)="enterNum($event)">6</button>
+      <button class="number" (click)="enterNum($event)">1</button>
+      <button class="number" (click)="enterNum($event)">2</button>
+      <button class="number" (click)="enterNum($event)">3</button>
+      <button class="number decimal" (click)="enterNum($event)">.</button>
+      <button class="number" (click)="enterNum($event)">0</button>
+      <button class="reset" (click)="reset()">CE</button>
+</div>
+  <div class="calculator-equal">
+      <button class="operation equal" (click)="operation($event)">=</button>
+  </div>
+</div>

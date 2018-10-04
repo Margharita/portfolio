@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'portfolio';
+  title: string = 'portfolio';
+  shownMain: boolean = false;
+  shownAdd: boolean = false;
+
+  showMenu(e) {
+    if(e.currentTarget.id === 'main') {
+      this.shownMain = !this.shownMain;
+    } else if (e.target.id === 'navbarLink'){
+      console.log(e.target.id)
+      this.shownAdd = !this.shownAdd;
+    }
+    
+  }
 }

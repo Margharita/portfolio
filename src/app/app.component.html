@@ -1,7 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light main-menu">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="dropdown-block visible-sm hidden-md">
+  <button class="navbar-toggler" type="button" id="main" (mouseover)="shownMain = !shownMain" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="dropdown-main-menu visible-sm hidden-md" (mouseleave)="shownMain = !shownMain" *ngIf="shownMain">
+    <a class="dropdown-item" routerLink="/">Home</a>
+    <a class="dropdown-item" routerLink="/about">About</a>
+    <a class="nav-link dropdown-toggle" (mouseenter)="shownAdd = !shownAdd" routerLink="/products" routerLinkActive="active" id="navbarLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="menu" *ngIf="shownAdd">
+          <a class="dropdown-item" routerLink="/products/slider">slider</a>
+          <a class="dropdown-item" routerLink="/products/calc">calculator</a>
+          <a class="dropdown-item" routerLink="/products/todo">to-do list</a>
+        </div>
+    <a class="dropdown-item" routerLink="/contacts">Contacts</a>
+  </div>
+</div>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
@@ -12,7 +25,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" routerLink="/products" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu">
           <a class="dropdown-item" routerLink="/products/slider">slider</a>
           <a class="dropdown-item" routerLink="/products/calc">calculator</a>
           <a class="dropdown-item" routerLink="/products/todo">to-do list</a>

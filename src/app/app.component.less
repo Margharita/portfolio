@@ -1,22 +1,39 @@
 .main-menu {
     padding-bottom: 50px;
-    .dropdown{
-        
+    .dropdown-block {
+        position: relative;
+        .dropdown-main-menu {
+            position: absolute;
+            margin-top: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            border: none;
+            z-index: 1;
+            background: #ccc;
+          
+        }
+    }
+    .dropdown {
         &:hover {
             display: block;
             margin-top: 0;
             transition: 1ms;
             .dropdown-menu {
                 display: block;
-                margin-top: 0;
-                background-color: rgba(238, 227, 227, 0.9);
+                padding: 0;
+                background-color: rgba(255, 255, 255, 0.6);
+                .dropdown-item {
+                    padding-bottom: 5px;
+                    &:active {
+                        background-color: #524444;
+                    }
+                }
             }
         }
     }
     li {
         font-size: 20px;
         padding-right: 80px;
-    
         a {
             cursor: pointer;
         }
