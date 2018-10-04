@@ -2,7 +2,7 @@
   box-shadow: 0 0 10px 2px #918181;
   border: 5px ridge #faf5f5;
   margin: 20px auto;
-  width: 400px;
+  max-width: 400px;
 }
 .slider .slider-window {
   width: 100%;

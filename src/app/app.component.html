@@ -6,8 +6,8 @@
   <div class="dropdown-main-menu visible-sm hidden-md" (mouseleave)="shownMain = !shownMain" *ngIf="shownMain">
     <a class="dropdown-item" routerLink="/">Home</a>
     <a class="dropdown-item" routerLink="/about">About</a>
-    <a class="nav-link dropdown-toggle" (mouseenter)="shownAdd = !shownAdd" routerLink="/products" routerLinkActive="active" id="navbarLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <div class="menu" *ngIf="shownAdd">
+    <a class="dropdown-item" (mouseenter)="shownAdd = !shownAdd" routerLink="/products" routerLinkActive="active" id="navbarLink" role="button" data-toggle="dropdown" aria-expanded="false">Projects<i class="fa fa-caret-right d-inline mt-1 pl-2"></i></a>    
+    <div class="sub-menu" *ngIf="shownAdd">
           <a class="dropdown-item" routerLink="/products/slider">slider</a>
           <a class="dropdown-item" routerLink="/products/calc">calculator</a>
           <a class="dropdown-item" routerLink="/products/todo">to-do list</a>
@@ -24,7 +24,7 @@
         <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="/products" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <a class="nav-link dropdown-toggle" routerLink="/products" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Projects</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" routerLink="/products/slider">slider</a>
           <a class="dropdown-item" routerLink="/products/calc">calculator</a>

@@ -4,13 +4,24 @@
         position: relative;
         .dropdown-main-menu {
             position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
             margin-top: 5px;
             cursor: pointer;
             margin-left: 10px;
             border: none;
             z-index: 1;
-            background: #ccc;
-          
+            .sub-menu {
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.6);
+                top: 80px;
+                left: 117px;
+                display: block;                
+            }
+            a {
+                &:active {
+                background-color: #524444;
+                }
+            }
         }
     }
     .dropdown {

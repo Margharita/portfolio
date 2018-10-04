@@ -1,7 +1,11 @@
-<div class="todo-list-wrapper d-flex flex-column">
-  <h2 class="todo-list-wrapper__heading"> {{ name }} </h2>
-  <app-form (taskPush)="taskAdd($event)"></app-form>
-  <ul>
-    <app-list #tasksList #tasksItem></app-list>
-  </ul>
+<div class="container">
+  <div class="row">
+    <div class="todo-list-wrapper col-lg-7 col-md-10 col-sm-12 d-flex flex-column">
+      <h2 class="todo-list-wrapper__heading"> {{ name }} </h2>
+      <app-form (taskPush)="taskAdd($event)"></app-form>
+      <ul>
+        <app-list #tasksList #tasksItem></app-list>
+      </ul>
+    </div>
+  </div>
 </div>

@@ -1,8 +1,14 @@
 .todo-list-wrapper {
   font-family: 'Raleway', sans-serif;
-  width: 60%;
   margin: 0 auto;
+  background: url('https://sweetadelines.org.uk/wp-content/uploads/blackboard-background.jpg') center no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 10px #000000;
+  border: 4px ridge #333333;
+  text-align: center;
+  min-height: 350px;
 }
 .todo-list-wrapper .todo-list-wrapper__heading {
-  padding-bottom: 20px;
+  padding: 20px 0;
+  color: #ffffff;
 }

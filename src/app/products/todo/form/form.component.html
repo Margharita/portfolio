@@ -1,8 +1,8 @@
-  <form class="todo-form" (ngSubmit)="onSubmit()" #newTask="ngForm">
-      <input class="form-control field-to-write" placeholder="What to do?" name="title" [(ngModel)]="title" required>
-      <button class="todo-form__btn btn-info" type="submit" [disabled]="newTask.form.invalid" *ngIf="!isWaiting">Submit</button>
+  <form class="todo-form d-flex f-wrap justify-content-center" (ngSubmit)="onSubmit()" #newTask="ngForm">
+      <input class="form-control field-to-write col-6 col-md-8" placeholder="What to do?" name="title" [(ngModel)]="title" required>
+      <button class="todo-form__btn btn-info col-2" type="submit" [disabled]="newTask.form.invalid" *ngIf="!isWaiting">Submit</button>
       <img class="waiting-image" src="http://www.primebldg.com/wp-content/uploads/2017/09/ajax-loader.gif" *ngIf="isWaiting">
-      <div class="todo-form__error error-mess" *ngIf="isError">
+      <div class="todo-form__error error-mess col-12" *ngIf="isError">
           <i class="fa fa-warning"></i>
           {{ errorMessage }}</div>
   </form>

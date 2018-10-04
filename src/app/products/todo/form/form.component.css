@@ -3,13 +3,14 @@
   flex-wrap: wrap;
 }
 .todo-form input {
-  width: 80%;
   margin-right: 15px;
+  margin-bottom: 12px;
 }
 .todo-form button {
   padding: 5px 10px;
   border-radius: 5px;
   max-width: 90px;
+  height: 37px;
 }
 .todo-form .waiting-image {
   width: 35px;

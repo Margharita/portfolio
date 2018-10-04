@@ -2,8 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
-    width: 90%;
-    // display: inline-block;
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 80%;
     .todo-item {
         padding-top: 5px;
         flex-grow: 9;
@@ -11,10 +12,12 @@
         display: inline-flex;  
         min-height: 38px;
         &:hover {
-            background-color: rgba(238, 227, 227, 0.5);
+            background-color: rgba(238, 227, 227, 0.1);
+            padding-left: 5px;
+            border-radius: 3px; 
         }        
         .todo-item__title {
-            overflow: hidden;
+            color: #ffffff;
             cursor: pointer; 
             position: relative;
             .todo-item__text-modify { 

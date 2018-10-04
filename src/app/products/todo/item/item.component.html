@@ -8,7 +8,6 @@
                 <button *ngIf="isModifying" (click)="onChange(item)">OK</button>
                 </div>           
             </div>
-            
             <div class="todo-item__text-option align-self-end"  *ngIf="!isWaiting">
                 <label [ngClass]="{ 'fa fa-check': item.done}">
                     <input type="checkbox" class="check-box" [checked]="item.done" (click)="onToggle(item)">
