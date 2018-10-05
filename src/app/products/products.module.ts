@@ -7,7 +7,6 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { TodoComponent } from './todo/todo.component';
 import { SliderService } from './slider/slider.service';
 import { TodoModule } from './todo/todo.module';
-import { CustomSliderComponent } from './custom-slider/custom-slider.component';
 
 
 const prRoutes: Routes = [
@@ -22,8 +21,7 @@ const prRoutes: Routes = [
 @NgModule({
     declarations: [
         SliderComponent,
-        CalculatorComponent,
-        CustomSliderComponent
+        CalculatorComponent
     ],
     imports: [
         CommonModule,
