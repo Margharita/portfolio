@@ -5,7 +5,7 @@ import { TodoComponent } from './todo.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { ItemComponent } from './item/item.component';
-import { TaskService } from '../../../services/todo.service';
+import { TaskService } from './todo.service';
 
 
 @NgModule({

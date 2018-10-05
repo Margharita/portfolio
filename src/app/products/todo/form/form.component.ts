@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { TaskService } from '../../../../services/todo.service';
+import { TaskService } from '../todo.service';
 import { Observable } from 'rxjs';
-import { TaskOperationResult } from '../../../../shared/task.operation.result';
+import { TaskOperationResult } from '../shared/task.operation.result';
 
 @Component({
   selector: 'app-form',

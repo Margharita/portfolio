@@ -1,8 +1,8 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
-import { Task } from '../../../../shared/task';
-import { TaskService } from '../../../../services/todo.service';
+import { Task } from '../shared/task';
+import { TaskService } from '../todo.service';
 import { Observable } from 'rxjs';
-import { TaskOperationResult } from '../../../../shared/task.operation.result';
+import { TaskOperationResult } from '../shared/task.operation.result';
 
 
 @Component({

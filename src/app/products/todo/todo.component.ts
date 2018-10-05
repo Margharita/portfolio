@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
-import { Task } from '../../../shared/task';
-import { NgForOf } from '@angular/common';    // подгрузить...
+import { Task } from './shared/task';
+import { NgForOf } from '@angular/common';    
 
 
 @Component({

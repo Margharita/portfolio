@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from '../../../shared/sliderImage';
-import { SliderService } from '../../../services/sliderService';
+import { Image } from './shared/sliderImage';
+import { SliderService } from './slider.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

@@ -1,3 +1,7 @@
+.operations-theme {
+  background-color: #7aa8fc;
+  border: 1px solid #4687ff;
+}
 .calculator {
   margin: 0 auto;
   padding: 10px;
@@ -16,7 +20,7 @@
 .calculator button {
   font-size: 1.3rem;
   border-radius: 2px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.7);
 }
 .calculator .calc-wrap {
   width: auto;
@@ -44,6 +48,7 @@
 .calculator .operations-display {
   background-color: #ffffff;
   text-align: right;
+  overflow: hidden;
   width: 215px;
   font-size: 2rem;
   padding: 0.5rem;
@@ -51,7 +56,13 @@
   border-radius: 2px;
   margin: 0.4rem;
 }
-.calculator .decimal,
+.calculator .decimal {
+  width: 60px;
+  height: 40px;
+  margin: 0.4rem;
+  background-color: #7aa8fc;
+  border: 1px solid #4687ff;
+}
 .calculator .reset {
   width: 60px;
   height: 40px;

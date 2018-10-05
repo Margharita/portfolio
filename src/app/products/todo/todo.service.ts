@@ -1,9 +1,8 @@
-import { Task } from '../shared/task';
-//import { User } from '../shared/user';
+import { Task } from './shared/task';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { TaskOperationResult } from '../shared/task.operation.result';
+import { TaskOperationResult } from './shared/task.operation.result';
 
 
 @Injectable()
@@ -46,23 +45,6 @@ export class TaskService {
             title: title,
         });
         return putResult;
-    }
-
-    onLogin(email: string, password: string, rememberMe: boolean, captcha: string): Observable<any> {
-        debugger;
-        const postResult: Observable<any> = this.httpClient.post<any>('https://repetitora.net/api/auth/login', {
-            email: email,
-            password: password,
-            rememberMe: true,
-            captcha: captcha
-        });
-        return postResult;
-    }
-
-    getCaptcha(): Observable<any> {
-        // tslint:disable-next-line:prefer-const
-        let getUrl = this.httpClient.get<string>('https://repetitora.net/Auth/Security/GetCaptchaUrlAddress');
-        return getUrl;
     }
 
 }

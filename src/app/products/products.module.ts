@@ -5,7 +5,7 @@ import { ProductsComponent } from './products.component';
 import { SliderComponent } from './slider/slider.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { TodoComponent } from './todo/todo.component';
-import { SliderService } from '../../services/sliderService';
+import { SliderService } from './slider/slider.service';
 import { TodoModule } from './todo/todo.module';
 import { CustomSliderComponent } from './custom-slider/custom-slider.component';
 
