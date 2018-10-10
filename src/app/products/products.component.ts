@@ -19,7 +19,8 @@ export class ProductsComponent implements OnInit {
   isChildActive(): boolean {
     if( this._router.isActive('/products/slider', true) ||
     this._router.isActive('/products/calc', true) ||
-    this._router.isActive('/products/todo', true)) {
+    this._router.isActive('/products/todo', true) ||
+    this._router.isActive('/products/paint', true)) {
       return true;
     } else { return false;}
      
