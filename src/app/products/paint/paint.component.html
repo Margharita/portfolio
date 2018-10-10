@@ -1,17 +1,16 @@
 <div class="container">
   <div class="row justify-content-around">
-      <canvas class="paint__canvas" #canvas (click)="addFill()" [width]="width" [height]="height"></canvas>
+      <canvas class="paint__canvas" [style.background]="fillCanvas" #canvas [width]="width" [height]="height"></canvas>
     <div class="paint-tools col-1">
-      <a class="paint-tools__reset fa fa-eraser" id="clearing"></a>
-      <input class="paint-tools__color" type="color" [(ngModel)]="myColor">
+      <a class="paint-tools__reset fa fa-eraser" (click)="erase()" id="clearing"></a>
+      <input class="paint-tools__color" type="color" (click)="toDefault()" [(ngModel)]="myColor">
       <div class="paint-tools__weight-wrapper">
         <div class="weight-value">{{myWeight}}</div>
         <input class="weight" type="range" min="0.5" max="50" step="0.5" [(ngModel)]="myWeight">
       </div>
-      <label class="paint-tools__bucket" style="background-image: url(../../../assets/images/cursors/bucket-icon.png)">
-          <input class="bucket__fill d-none" type="color"  [(ngModel)]="fillColor">
+      <label class="paint-tools__bucket"  style="background-image: url(../../../assets/images/cursors/bucket-icon.png)">
+          <input class="bucket__fill d-none" type="color" [(ngModel)]="fillCanvas">
       </label>
-      
       <div class="paint-tools__clear-all" (click)="clearAll()" style="background-image: url(../../../assets/images/cursors/clear-all.png)"></div>
     </div>
   </div>

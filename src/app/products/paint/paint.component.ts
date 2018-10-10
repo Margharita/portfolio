@@ -18,16 +18,11 @@ export class PaintComponent implements AfterViewInit {
    @Input() public myWeight: number = 5;
    @Input() public myColor: string = '#000000';
    @Input() public fillColor: string = '#ffffff';
-   toggleFill = false;
+   public fillCanvas: string = '#ffffff';
 
   private cx: CanvasRenderingContext2D; 
   drawingSubscription: Subscription;
-
   
-  //myWeight: number = 1;
-  
-  //eraser: string;
-
   constructor() { } 
 
   public ngAfterViewInit() {
@@ -40,6 +35,7 @@ export class PaintComponent implements AfterViewInit {
     canvasEl.height = this.height;
 
     // set style of the line
+   
     this.changeStyle();
     this.cx.lineCap = 'round';
 
@@ -89,7 +85,7 @@ export class PaintComponent implements AfterViewInit {
     // incase the context is not set
     if (!this.cx) {
       return;
-    }
+    }    
   
     this.changeStyle();
 
@@ -109,19 +105,25 @@ export class PaintComponent implements AfterViewInit {
 
   }
 
+  toDefault() {
+    //returned default value of globalCompositeOperation
+    this.cx.globalCompositeOperation = 'source-over'; 
+  }
+
   changeStyle() {
-    // if(this.cx.globalCompositeOperation === "source-out") {
-    //    this.cx.globalCompositeOperation = "source-over";
-    // }
     this.cx.lineWidth = this.myWeight;
     this.cx.strokeStyle = this.myColor;
   }
 
-  addFill() {
-    this.toggleFill = true;
-    //this.cx.globalCompositeOperation = 'source-out';
-    this.cx.fillStyle = this.fillColor;
-    this.cx.fill();
+  // addFill() {  
+  //   this.cx.fillCanvas = this.fillColor;
+  //   this.cx.fillRect(0, 0, this.width, this.height);
+  // }
+  
+  erase(){ 
+    this.cx.globalCompositeOperation = 'destination-out';
+    this.myColor = "rgba(255,255,255, 1)";
+    this.cx.beginPath();
   }
 
   clearAll() {
