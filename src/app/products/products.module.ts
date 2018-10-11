@@ -5,10 +5,13 @@ import { FormsModule }   from '@angular/forms';
 import { ProductsComponent } from './products.component';
 import { SliderComponent } from './slider/slider.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { TodoComponent } from './todo/todo.component';
 import { SliderService } from './slider/slider.service';
-import { TodoModule } from './todo/todo.module';
 import { PaintComponent } from './paint/paint.component';
+import { TodoComponent } from './todo/todo.component';
+import { ListComponent } from './todo/list/list.component';
+import { ItemComponent } from './todo/item/item.component';
+import { FormComponent } from './todo/form/form.component';
+import { TaskService } from './todo/todo.service';
 
 
 const prRoutes: Routes = [
@@ -25,14 +28,17 @@ const prRoutes: Routes = [
     declarations: [
         SliderComponent,
         CalculatorComponent,
-        PaintComponent
+        PaintComponent,
+        TodoComponent,
+        FormComponent,
+        ListComponent,
+        ItemComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
-        TodoModule,
         RouterModule.forChild(prRoutes)        
     ],
-    providers: [SliderService],
+    providers: [SliderService, TaskService],
 })
 export class ProductsModule { }

@@ -1,8 +1,8 @@
 .paint__canvas{
-    width: 600px;
-    height: 400px;
     border: 3px groove #78c7ca;
     box-shadow: 0 0 50px 2px #a57272;
+    // max-height: 700px;
+    // max-width: 400px;
     cursor: url(../../../assets/images/cursors/red-pencil.cur), default;
 }
 .paint-tools{
@@ -11,8 +11,7 @@
     padding: 0;
     padding-top: 15px;
     border: 3px ridge #78c7ca;
-    background: url(../../../assets/images/tools-bg.jpg) no-repeat;
-    background-size: cover;
+    background: #465152;
     &__reset {
         font-size: 18px;
         margin: 0 auto;
@@ -55,27 +54,19 @@
         background-size: cover;
     }
     &__weight-wrapper {
-        margin-top: 10px;
         padding-left: 5px;
         position: relative;
         height: 25%;
+        margin: 0 auto;
+        margin-top: 10px;
         .weight {
-            height: 20%;
-            right: auto;
-            top: 50%;
-            width: 90%;
-            position: absolute;            
+            width: 90%;           
         }
         .weight-value {
-            position: absolute;
-            left: 35%;
-            top: 0;
-            padding: 0 5px;
+            color: #fafafa;
+            text-align: center;
             font-weight: bold;
-            border-radius: 50%;
             font-size: 12px;
-            border: 1px solid #78c7ca;
-            background-color: #fff;
         }
         
     }

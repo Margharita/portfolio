@@ -13,8 +13,8 @@ export class PaintComponent implements AfterViewInit {
   @ViewChild('canvas') public canvas: ElementRef;
 
    // setting a width and height for the canvas
-   @Input() public width = 600;
-   @Input() public height = 400;
+   @Input() public width = window.innerWidth;
+   @Input() public height = window.innerHeight;
    @Input() public myWeight: number = 5;
    @Input() public myColor: string = '#000000';
    @Input() public fillColor: string = '#ffffff';
@@ -114,11 +114,6 @@ export class PaintComponent implements AfterViewInit {
     this.cx.lineWidth = this.myWeight;
     this.cx.strokeStyle = this.myColor;
   }
-
-  // addFill() {  
-  //   this.cx.fillCanvas = this.fillColor;
-  //   this.cx.fillRect(0, 0, this.width, this.height);
-  // }
   
   erase(){ 
     this.cx.globalCompositeOperation = 'destination-out';
