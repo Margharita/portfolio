@@ -13,7 +13,7 @@ import { NgForOf } from '@angular/common';
 export class TodoComponent {
   name: String = 'My everyday tasks:';
   @ViewChild('tasksList') tasksList: ListComponent;
-  @ViewChild('tasksItem') tasksItem: ItemComponent;
+  @ViewChild('items') items: ItemComponent;
 
   constructor() { 
     

@@ -8,17 +8,15 @@ import { TaskOperationResult } from './shared/task.operation.result';
 @Injectable()
 
 export class TaskService {
-    http: any;
     constructor(private httpClient: HttpClient) {}
 
     getTaskOnServer(): Observable<Task[]> {
-        // tslint:disable-next-line:prefer-const
-        let obsResult = this.httpClient.get<Task[]>('https://repetitora.net/api/JS/Tasks?page=1&widgetId=2323&count=30');
-        return obsResult;
+        let getResult = this.httpClient.get<Task[]>('https://repetitora.net/api/JS/Tasks?page=1&widgetId=2323&count=30');
+        return getResult;
     }
 
     postTaskOnServer(title: string): Observable<TaskOperationResult> {
-        const postResult: Observable<TaskOperationResult> = this.httpClient
+        let postResult: Observable<TaskOperationResult> = this.httpClient
         .post<TaskOperationResult>('https://repetitora.net/api/JS/Tasks', {
             widgetId: 2323,
             title: title
@@ -27,12 +25,12 @@ export class TaskService {
     }
 
     deleteTaskOnServer(id: string): Observable<any> {
-        const postResult = this.httpClient.delete<any>('https://repetitora.net/api/JS/Tasks?widgetId=2323&taskId=' + id);
-        return postResult;
+        let deleteResult = this.httpClient.delete<any>('https://repetitora.net/api/JS/Tasks?widgetId=2323&taskId=' + id);
+        return deleteResult;
     }
 
     putTaskOnServer(id, done: boolean): Observable<any> {
-        const putResult = this.httpClient.put<any>('https://repetitora.net/api/JS/Tasks?taskId=' + id, {
+        let putResult = this.httpClient.put<any>('https://repetitora.net/api/JS/Tasks?taskId=' + id, {
             widgetId: 2323,
             done: done,
         });
@@ -40,7 +38,7 @@ export class TaskService {
     }
 
     changeTaskNameOnServer(id, title: string): Observable<any> {
-        const putResult = this.httpClient.put<any>('https://repetitora.net/api/JS/Tasks?taskId=' + id, {
+        let putResult = this.httpClient.put<any>('https://repetitora.net/api/JS/Tasks?taskId=' + id, {
             widgetId: 2323,
             title: title,
         });

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-around">
-    <canvas class="paint__canvas" [style.background]="fillCanvas" #canvas [width]="500" [height]="400"></canvas>
+    <canvas class="paint__canvas" [style.background]="fillCanvas" #canvas [width]="width" [height]="height"></canvas>
     <div class="paint-tools col-1">
       <a class="paint-tools__reset fa fa-eraser" (click)="erase()" id="clearing"></a>
       <input class="paint-tools__color" type="color" (click)="toDefault()" [(ngModel)]="myColor">

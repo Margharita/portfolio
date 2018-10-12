@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../todo.service';
 import { Task } from '../shared/task';
 

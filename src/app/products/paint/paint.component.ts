@@ -31,8 +31,8 @@ export class PaintComponent implements AfterViewInit {
     this.cx = canvasEl.getContext('2d');
 
     // set the width and height
-    canvasEl.width = this.width;
-    canvasEl.height = this.height;
+    canvasEl.width = this.width * 0.6;
+    canvasEl.height = this.height * 0.7;
 
     // set style of the line
    
